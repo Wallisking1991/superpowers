@@ -1,0 +1,513 @@
+# Instincts generated from https://github.com/Wallisking1991/superpowers
+# Generated: 2026-02-26T04:01:14.197Z
+# Version: 2.0
+
+---
+id: superpowers-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/Wallisking1991/superpowers
+---
+
+# Superpowers Commit Length
+
+## Action
+
+Write moderate-length commit messages (~50 characters)
+
+## Evidence
+
+- Average commit message length: 54 chars
+- Based on 200 commits
+
+---
+id: superpowers-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/Wallisking1991/superpowers
+---
+
+# Superpowers Naming Files
+
+## Action
+
+Use kebab-case naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: kebab-case
+
+---
+id: superpowers-import-alias
+trigger: "when importing modules"
+confidence: 0.85
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/Wallisking1991/superpowers
+---
+
+# Superpowers Import Alias
+
+## Action
+
+Use path aliases (@/, ~/) instead of relative imports
+
+## Evidence
+
+- Import analysis shows alias pattern
+- Example: import { x } from '@/lib/x'
+
+---
+id: superpowers-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/Wallisking1991/superpowers
+---
+
+# Superpowers Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: superpowers-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/Wallisking1991/superpowers
+---
+
+# Superpowers Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: superpowers-workflow-feature-development
+trigger: "when implementing a new feature"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/Wallisking1991/superpowers
+---
+
+# Superpowers Workflow Feature Development
+
+## Action
+
+Follow the feature-development workflow:
+1. Add feature implementation
+2. Add tests for feature
+3. Update documentation
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~8x per month
+- Files: **/*.test.*
+
+---
+id: superpowers-workflow-release-version
+trigger: "when doing release version"
+confidence: 0.65
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/Wallisking1991/superpowers
+---
+
+# Superpowers Workflow Release Version
+
+## Action
+
+Follow the release-version workflow:
+1. Update plugin manifest with new version
+2. Document changes in RELEASE-NOTES.md
+3. Update Claude plugin marketplace metadata
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~3x per month
+- Files: .claude-plugin/plugin.json, .claude-plugin/marketplace.json, RELEASE-NOTES.md
+
+---
+id: superpowers-workflow-fix-windows-hooks
+trigger: "when doing fix windows hooks"
+confidence: 0.7
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/Wallisking1991/superpowers
+---
+
+# Superpowers Workflow Fix Windows Hooks
+
+## Action
+
+Follow the fix-windows-hooks workflow:
+1. Update hook configuration
+2. Fix script wrapper compatibility
+3. Add Windows-specific execution paths
+4. Update release notes with Windows fixes
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~4x per month
+- Files: hooks/hooks.json, hooks/run-hook.cmd, hooks/session-start
+
+---
+id: superpowers-workflow-update-skill-documentation
+trigger: "when doing update skill documentation"
+confidence: 0.75
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/Wallisking1991/superpowers
+---
+
+# Superpowers Workflow Update Skill Documentation
+
+## Action
+
+Follow the update-skill-documentation workflow:
+1. Update skill markdown files
+2. Add integration requirements
+3. Update workflow documentation
+4. Add usage restrictions or guidelines
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~5x per month
+- Files: skills/*/SKILL.md
+
+---
+id: superpowers-workflow-update-installation-docs
+trigger: "when doing update installation docs"
+confidence: 0.7
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/Wallisking1991/superpowers
+---
+
+# Superpowers Workflow Update Installation Docs
+
+## Action
+
+Follow the update-installation-docs workflow:
+1. Update installation instructions
+2. Fix platform-specific paths
+3. Add missing prerequisites
+4. Update verification steps
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~4x per month
+- Files: .codex/INSTALL.md, docs/README.codex.md, docs/README.opencode.md
+
+---
+id: superpowers-workflow-add-test-coverage
+trigger: "when doing add test coverage"
+confidence: 0.65
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/Wallisking1991/superpowers
+---
+
+# Superpowers Workflow Add Test Coverage
+
+## Action
+
+Follow the add-test-coverage workflow:
+1. Create or update test scripts
+2. Add test cases for new functionality
+3. Verify expected behavior patterns
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~3x per month
+- Files: tests/*/test-*.sh, tests/*/run-test.sh
+
+---
+id: superpowers-kebab-case-files
+trigger: "When creating new files"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: Wallisking1991/superpowers
+---
+
+# Superpowers Kebab Case Files
+
+## Action
+
+Use kebab-case naming convention
+
+## Evidence
+
+- Consistent kebab-case in folder structure
+- Files like run-hook.cmd, session-start
+
+---
+id: superpowers-camel-case-functions
+trigger: "When defining JavaScript functions"
+confidence: 0.85
+domain: code-style
+source: repo-analysis
+source_repo: Wallisking1991/superpowers
+---
+
+# Superpowers Camel Case Functions
+
+## Action
+
+Use camelCase naming convention
+
+## Evidence
+
+- JavaScript codebase patterns
+- Consistent camelCase in analyzed code
+
+---
+id: superpowers-screaming-snake-constants
+trigger: "When defining constants"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: Wallisking1991/superpowers
+---
+
+# Superpowers Screaming Snake Constants
+
+## Action
+
+Use SCREAMING_SNAKE_CASE naming
+
+## Evidence
+
+- Pattern found in JavaScript files
+- Common in superpowers codebase
+
+---
+id: superpowers-conventional-commits
+trigger: "When making a commit"
+confidence: 0.95
+domain: git
+source: repo-analysis
+source_repo: Wallisking1991/superpowers
+---
+
+# Superpowers Conventional Commits
+
+## Action
+
+Use conventional commit format with prefixes: fix, docs, feat, refactor, chore, test
+
+## Evidence
+
+- 100% of sample commits follow this pattern
+- Examples: 'chore: ignore .DS_Store', 'fix: quote CLAUDE_PLUGIN_ROOT'
+
+---
+id: superpowers-try-catch-errors
+trigger: "When handling errors in JavaScript"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: Wallisking1991/superpowers
+---
+
+# Superpowers Try Catch Errors
+
+## Action
+
+Use try-catch blocks for error handling
+
+## Evidence
+
+- Error handling style identified as try-catch
+- No custom error classes detected
+
+---
+id: superpowers-separate-test-files
+trigger: "When writing tests"
+confidence: 0.9
+domain: testing
+source: repo-analysis
+source_repo: Wallisking1991/superpowers
+---
+
+# Superpowers Separate Test Files
+
+## Action
+
+Place tests in separate test directory structure
+
+## Evidence
+
+- testLocation: 'separate'
+- tests/ folder in common folders
+- Pattern: tests/*/test-*.sh
+
+---
+id: superpowers-shell-script-tests
+trigger: "When creating test files"
+confidence: 0.85
+domain: testing
+source: repo-analysis
+source_repo: Wallisking1991/superpowers
+---
+
+# Superpowers Shell Script Tests
+
+## Action
+
+Use shell scripts with test-*.sh naming pattern
+
+## Evidence
+
+- tests/*/test-*.sh pattern
+- tests/*/run-test.sh pattern in workflows
+
+---
+id: superpowers-release-workflow
+trigger: "When preparing a new version release"
+confidence: 0.95
+domain: workflow
+source: repo-analysis
+source_repo: Wallisking1991/superpowers
+---
+
+# Superpowers Release Workflow
+
+## Action
+
+Update plugin manifest, document in RELEASE-NOTES.md, and update marketplace metadata
+
+## Evidence
+
+- Release v4.3.1 commits
+- Consistent pattern across .claude-plugin/ files
+
+---
+id: superpowers-windows-hook-fix
+trigger: "When Windows users report hook execution failures"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: Wallisking1991/superpowers
+---
+
+# Superpowers Windows Hook Fix
+
+## Action
+
+Update hooks.json, fix run-hook.cmd, and update .gitattributes
+
+## Evidence
+
+- fix: Windows hook execution commits
+- Pattern in hooks/ directory changes
+
+---
+id: superpowers-skill-doc-update
+trigger: "When adding new skill requirements or workflow changes"
+confidence: 0.88
+domain: workflow
+source: repo-analysis
+source_repo: Wallisking1991/superpowers
+---
+
+# Superpowers Skill Doc Update
+
+## Action
+
+Update skills/*/SKILL.md files with requirements and guidelines
+
+## Evidence
+
+- Frequency of 5x/month
+- Pattern in skills directory structure
+
+---
+id: superpowers-install-doc-sync
+trigger: "When installation process changes or platform issues are found"
+confidence: 0.87
+domain: workflow
+source: repo-analysis
+source_repo: Wallisking1991/superpowers
+---
+
+# Superpowers Install Doc Sync
+
+## Action
+
+Update all platform-specific install docs (.codex/INSTALL.md, docs/README.*.md, .opencode/INSTALL.md)
+
+## Evidence
+
+- Multiple install docs across platforms
+- Consistent update pattern
+
+---
+id: superpowers-test-driven-development
+trigger: "When implementing TDD approach or validating new features"
+confidence: 0.82
+domain: workflow
+source: repo-analysis
+source_repo: Wallisking1991/superpowers
+---
+
+# Superpowers Test Driven Development
+
+## Action
+
+Create test scripts before implementation and verify behavior patterns
+
+## Evidence
+
+- test: add Test 9 - main branch red flag warning
+- TDD workflow frequency
+
+---
+id: superpowers-merge-pull-requests
+trigger: "When merging feature branches"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: Wallisking1991/superpowers
+---
+
+# Superpowers Merge Pull Requests
+
+## Action
+
+Use descriptive merge commit messages with pull request references
+
+## Evidence
+
+- Merge pull request #524
+- Merge pull request #523
+- Pattern of PR merges
+
