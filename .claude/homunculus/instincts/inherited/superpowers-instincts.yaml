@@ -1,0 +1,635 @@
+# Instincts generated from https://github.com/Wallisking1991/superpowers
+# Generated: 2026-04-02T01:37:02.419Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: superpowers-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/Wallisking1991/superpowers
+---
+
+# Superpowers Commit Length
+
+## Action
+
+Write moderate-length commit messages (~58 characters)
+
+## Evidence
+
+- Average commit message length: 58 chars
+- Based on 200 commits
+
+---
+id: superpowers-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/Wallisking1991/superpowers
+---
+
+# Superpowers Naming Files
+
+## Action
+
+Use kebab-case naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: kebab-case
+
+---
+id: superpowers-import-alias
+trigger: "when importing modules"
+confidence: 0.85
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/Wallisking1991/superpowers
+---
+
+# Superpowers Import Alias
+
+## Action
+
+Use path aliases (@/, ~/) instead of relative imports
+
+## Evidence
+
+- Import analysis shows alias pattern
+- Example: import { x } from '@/lib/x'
+
+---
+id: superpowers-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/Wallisking1991/superpowers
+---
+
+# Superpowers Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: superpowers-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/Wallisking1991/superpowers
+---
+
+# Superpowers Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: superpowers-test-naming
+trigger: "when creating a test file"
+confidence: 0.85
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/Wallisking1991/superpowers
+---
+
+# Superpowers Test Naming
+
+## Action
+
+Name test files using the pattern: *.test.js
+
+## Evidence
+
+- File pattern: *.test.js
+- Consistent across test files
+
+---
+id: superpowers-test-types
+trigger: "when planning tests for a feature"
+confidence: 0.7
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/Wallisking1991/superpowers
+---
+
+# Superpowers Test Types
+
+## Action
+
+Write unit, integration tests to match project standards
+
+## Evidence
+
+- Test types detected: unit, integration
+- Coverage config: no
+
+---
+id: superpowers-workflow-feature-development
+trigger: "when implementing a new feature"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/Wallisking1991/superpowers
+---
+
+# Superpowers Workflow Feature Development
+
+## Action
+
+Follow the feature-development workflow:
+1. Add feature implementation
+2. Add tests for feature
+3. Update documentation
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~12x per month
+- Files: **/*.test.*
+
+---
+id: superpowers-workflow-release-version-bump
+trigger: "when doing release version bump"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/Wallisking1991/superpowers
+---
+
+# Superpowers Workflow Release Version Bump
+
+## Action
+
+Follow the release-version-bump workflow:
+1. Update .claude-plugin/marketplace.json
+2. Update .claude-plugin/plugin.json
+3. Update .cursor-plugin/plugin.json (sometimes)
+4. Update package.json
+5. Update RELEASE-NOTES.md
+6. Update or create .version-bump.json (sometimes)
+7. Update gemini-extension.json (sometimes)
+8. Run version bump script (scripts/bump-version.sh, sometimes)
+9. Commit all updated files with a release message
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: .claude-plugin/marketplace.json, .claude-plugin/plugin.json, .cursor-plugin/plugin.json
+
+---
+id: superpowers-workflow-update-brainstorm-server-implementation
+trigger: "when doing update brainstorm server implementation"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/Wallisking1991/superpowers
+---
+
+# Superpowers Workflow Update Brainstorm Server Implementation
+
+## Action
+
+Follow the update-brainstorm-server-implementation workflow:
+1. Edit skills/brainstorming/scripts/server.cjs or server.js
+2. Edit skills/brainstorming/scripts/start-server.sh and/or stop-server.sh
+3. Edit skills/brainstorming/visual-companion.md (sometimes)
+4. Update or fix related tests in tests/brainstorm-server/
+5. Update RELEASE-NOTES.md to describe changes
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: skills/brainstorming/scripts/server.cjs, skills/brainstorming/scripts/server.js, skills/brainstorming/scripts/start-server.sh
+
+---
+id: superpowers-workflow-skill-spec-or-plan-review-loop-update
+trigger: "when doing skill spec or plan review loop update"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/Wallisking1991/superpowers
+---
+
+# Superpowers Workflow Skill Spec Or Plan Review Loop Update
+
+## Action
+
+Follow the skill-spec-or-plan-review-loop-update workflow:
+1. Edit skills/brainstorming/SKILL.md and/or skills/writing-plans/SKILL.md
+2. Edit skills/brainstorming/spec-document-reviewer-prompt.md and/or skills/writing-plans/plan-document-reviewer-prompt.md
+3. Update RELEASE-NOTES.md to document review process changes
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: skills/brainstorming/SKILL.md, skills/writing-plans/SKILL.md, skills/brainstorming/spec-document-reviewer-prompt.md
+
+---
+id: superpowers-workflow-add-or-update-contributor-guidelines
+trigger: "when doing add or update contributor guidelines"
+confidence: 0.55
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/Wallisking1991/superpowers
+---
+
+# Superpowers Workflow Add Or Update Contributor Guidelines
+
+## Action
+
+Follow the add-or-update-contributor-guidelines workflow:
+1. Edit or add CLAUDE.md, AGENTS.md, CODE_OF_CONDUCT.md
+2. Edit or add .github/PULL_REQUEST_TEMPLATE.md
+3. Edit or add .github/ISSUE_TEMPLATE/*
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~1x per month
+- Files: CLAUDE.md, AGENTS.md, CODE_OF_CONDUCT.md
+
+---
+id: superpowers-workflow-add-or-update-codex-opencode-compatibility-docs
+trigger: "when doing add or update codex opencode compatibility docs"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/Wallisking1991/superpowers
+---
+
+# Superpowers Workflow Add Or Update Codex Opencode Compatibility Docs
+
+## Action
+
+Follow the add-or-update-codex-opencode-compatibility-docs workflow:
+1. Add or update docs/superpowers/specs/*codex-app-compatibility*.md
+2. Add or update docs/superpowers/plans/*codex-app-compatibility*.md
+3. Add or update skills/using-superpowers/references/codex-tools.md
+4. Edit docs/README.codex.md or docs/README.opencode.md as needed
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: docs/superpowers/specs/2026-03-23-codex-app-compatibility-design.md, docs/superpowers/plans/2026-03-23-codex-app-compatibility.md, skills/using-superpowers/references/codex-tools.md
+
+---
+id: superpowers-instinct-file-naming-kebab-case
+trigger: "When creating or renaming a file"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: Wallisking1991/superpowers
+---
+
+# Superpowers Instinct File Naming Kebab Case
+
+## Action
+
+Use kebab-case for file names
+
+## Evidence
+
+- Pattern in files: skills/brainstorming/scripts/start-server.sh
+- Pattern in files: docs/README.opencode.md
+
+---
+id: superpowers-instinct-function-naming-camelCase
+trigger: "When defining a function"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: Wallisking1991/superpowers
+---
+
+# Superpowers Instinct Function Naming CamelCase
+
+## Action
+
+Use camelCase for function names
+
+## Evidence
+
+- Naming convention: functions are camelCase in codeStyle
+
+---
+id: superpowers-instinct-class-naming-pascalcase
+trigger: "When defining a class"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: Wallisking1991/superpowers
+---
+
+# Superpowers Instinct Class Naming Pascalcase
+
+## Action
+
+Use PascalCase for class names
+
+## Evidence
+
+- Naming convention: classes are PascalCase in codeStyle
+
+---
+id: superpowers-instinct-constant-naming-screaming-snake-case
+trigger: "When defining a constant"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: Wallisking1991/superpowers
+---
+
+# Superpowers Instinct Constant Naming Screaming Snake Case
+
+## Action
+
+Use SCREAMING_SNAKE_CASE for constant names
+
+## Evidence
+
+- Naming convention: constants are SCREAMING_SNAKE_CASE in codeStyle
+
+---
+id: superpowers-instinct-import-alias
+trigger: "When importing modules"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: Wallisking1991/superpowers
+---
+
+# Superpowers Instinct Import Alias
+
+## Action
+
+Use alias import style
+
+## Evidence
+
+- Import style: alias in codeStyle
+
+---
+id: superpowers-instinct-named-exports
+trigger: "When exporting modules"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: Wallisking1991/superpowers
+---
+
+# Superpowers Instinct Named Exports
+
+## Action
+
+Use named exports
+
+## Evidence
+
+- Export style: named in codeStyle
+
+---
+id: superpowers-instinct-test-file-pattern
+trigger: "When creating a test file"
+confidence: 0.9
+domain: testing
+source: repo-analysis
+source_repo: Wallisking1991/superpowers
+---
+
+# Superpowers Instinct Test File Pattern
+
+## Action
+
+Name the file with the pattern *.test.js
+
+## Evidence
+
+- Pattern in files: tests/brainstorm-server/server.test.js
+- testing.filePattern: *.test.js
+
+---
+id: superpowers-instinct-test-types-unit-integration
+trigger: "When writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: Wallisking1991/superpowers
+---
+
+# Superpowers Instinct Test Types Unit Integration
+
+## Action
+
+Include both unit and integration tests as appropriate
+
+## Evidence
+
+- testing.testTypes: unit, integration
+- Pattern in files: tests/brainstorm-server/server.test.js
+
+---
+id: superpowers-instinct-test-location-separate
+trigger: "When adding tests"
+confidence: 0.85
+domain: testing
+source: repo-analysis
+source_repo: Wallisking1991/superpowers
+---
+
+# Superpowers Instinct Test Location Separate
+
+## Action
+
+Place test files in the separate 'tests' directory
+
+## Evidence
+
+- architecture.folderStructure.testLocation: separate
+- Pattern in files: tests/brainstorm-server/server.test.js
+
+---
+id: superpowers-instinct-commit-prefix
+trigger: "When writing a commit message"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: Wallisking1991/superpowers
+---
+
+# Superpowers Instinct Commit Prefix
+
+## Action
+
+Start the commit message with a conventional prefix (fix, feat, docs, chore, test, refactor, etc.)
+
+## Evidence
+
+- Pattern in commits: fix(opencode): inject bootstrap as user message instead of system message
+- Pattern in commits: docs: update release notes with OpenCode bootstrap change
+- Pattern in commits: feat: add Copilot CLI tool mapping, docs, and install instructions
+
+---
+id: superpowers-instinct-commit-length
+trigger: "When writing a commit message"
+confidence: 0.7
+domain: git
+source: repo-analysis
+source_repo: Wallisking1991/superpowers
+---
+
+# Superpowers Instinct Commit Length
+
+## Action
+
+Keep the commit message concise, around 50-60 characters on average
+
+## Evidence
+
+- commits.averageLength: 58
+- Pattern in commits: fix(opencode): inject bootstrap as user message instead of system message
+
+---
+id: superpowers-instinct-release-version-bump
+trigger: "When a new version of the project is ready to be released"
+confidence: 0.95
+domain: workflow
+source: repo-analysis
+source_repo: Wallisking1991/superpowers
+---
+
+# Superpowers Instinct Release Version Bump
+
+## Action
+
+Update plugin manifests, package.json, release notes, and run version bump script as needed; commit all with a release message
+
+## Evidence
+
+- Workflow: release-version-bump
+- Pattern in commits: Release v5.0.7: Copilot CLI support, OpenCode fixes
+- Pattern in files: .claude-plugin/marketplace.json, package.json, RELEASE-NOTES.md
+
+---
+id: superpowers-instinct-update-brainstorm-server
+trigger: "When making changes to the brainstorm server's behavior, structure, or reliability"
+confidence: 0.92
+domain: workflow
+source: repo-analysis
+source_repo: Wallisking1991/superpowers
+---
+
+# Superpowers Instinct Update Brainstorm Server
+
+## Action
+
+Edit server scripts, update related tests, and update release notes
+
+## Evidence
+
+- Workflow: update-brainstorm-server-implementation
+- Pattern in files: skills/brainstorming/scripts/server.cjs, tests/brainstorm-server/server.test.js
+
+---
+id: superpowers-instinct-update-review-loop
+trigger: "When improving or changing the review process for plans/specs in skills"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: Wallisking1991/superpowers
+---
+
+# Superpowers Instinct Update Review Loop
+
+## Action
+
+Edit skill markdowns and reviewer prompts, update release notes
+
+## Evidence
+
+- Workflow: skill-spec-or-plan-review-loop-update
+- Pattern in files: skills/brainstorming/SKILL.md, skills/brainstorming/spec-document-reviewer-prompt.md
+
+---
+id: superpowers-instinct-update-contributor-guidelines
+trigger: "When improving contributor onboarding, filtering PRs, or clarifying community standards"
+confidence: 0.85
+domain: workflow
+source: repo-analysis
+source_repo: Wallisking1991/superpowers
+---
+
+# Superpowers Instinct Update Contributor Guidelines
+
+## Action
+
+Edit or add contributor guidelines, code of conduct, PR/issue templates
+
+## Evidence
+
+- Workflow: add-or-update-contributor-guidelines
+- Pattern in files: CLAUDE.md, .github/PULL_REQUEST_TEMPLATE.md
+
+---
+id: superpowers-instinct-codex-opencode-docs
+trigger: "When documenting compatibility plans, specs, or tool mappings for Codex App or OpenCode"
+confidence: 0.87
+domain: workflow
+source: repo-analysis
+source_repo: Wallisking1991/superpowers
+---
+
+# Superpowers Instinct Codex Opencode Docs
+
+## Action
+
+Add or update compatibility docs and references
+
+## Evidence
+
+- Workflow: add-or-update-codex-opencode-compatibility-docs
+- Pattern in files: docs/superpowers/specs/2026-03-23-codex-app-compatibility-design.md
+
+---
+id: superpowers-instinct-error-handling-try-catch
+trigger: "When handling errors in JavaScript code"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: Wallisking1991/superpowers
+---
+
+# Superpowers Instinct Error Handling Try Catch
+
+## Action
+
+Use try-catch blocks for error handling
+
+## Evidence
+
+- errorHandling.style: try-catch
+
